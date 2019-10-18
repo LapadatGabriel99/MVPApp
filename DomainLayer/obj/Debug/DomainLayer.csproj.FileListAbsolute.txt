@@ -1,0 +1,5 @@
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\DomainLayer\bin\Debug\DomainLayer.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\DomainLayer\bin\Debug\DomainLayer.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\DomainLayer\obj\Debug\DomainLayer.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\DomainLayer\obj\Debug\DomainLayer.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\DomainLayer\obj\Debug\DomainLayer.csprojAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\CommonComponents\bin\Debug\CommonComponents.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\CommonComponents\bin\Debug\CommonComponents.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\CommonComponents\obj\Debug\CommonComponents.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\CommonComponents\obj\Debug\CommonComponents.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\CommonComponents\obj\Debug\CommonComponents.csprojAssemblyReference.cache

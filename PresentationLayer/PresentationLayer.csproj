@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C0A2DB3-20D8-46EC-9F2B-AA95ACEB6083}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PresentationLayer.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Common\ILabelChangeLocation.cs" />
+    <Compile Include="Core\Common\ILabelStartLocation.cs" />
+    <Compile Include="Core\Common\ILabelConditions.cs" />
+    <Compile Include="Core\Common\IUnderlineLabelConditions.cs" />
+    <Compile Include="Core\Common\IUserControl.cs" />
+    <Compile Include="Core\Dependencies\IMainViewDependency.cs" />
+    <Compile Include="Core\Presenters\IBasePresenter.cs" />
+    <Compile Include="Core\Presenters\IHelpAboutPresenter.cs" />
+    <Compile Include="Core\Presenters\IMainPresenter.cs" />
+    <Compile Include="Core\Presenters\IPresenter.cs" />
+    <Compile Include="Core\Presenters\UserControls\IDeparmentsUserControlPresenter.cs" />
+    <Compile Include="Core\Presenters\UserControls\INewsUserControlPresenter.cs" />
+    <Compile Include="Core\Presenters\UserControls\IPlantsUserControlPresenter.cs" />
+    <Compile Include="Core\Views\IErrorMessageView.cs" />
+    <Compile Include="Core\Views\IHelpAboutView.cs" />
+    <Compile Include="Core\Views\IMainView.cs" />
+    <Compile Include="Core\Views\UserControls\IDepartmentsUserControlView.cs" />
+    <Compile Include="Core\Views\UserControls\INewsUserControlView.cs" />
+    <Compile Include="Core\Views\UserControls\IPlantsUserControlView.cs" />
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Common\ButtonHelper.cs" />
+    <Compile Include="Persistence\Common\FormHelper.cs" />
+    <Compile Include="Persistence\Common\PictureBoxHelper.cs" />
+    <Compile Include="Persistence\Common\UnderlineLabelConditions.cs" />
+    <Compile Include="Persistence\Presenters\BasePresenter.cs" />
+    <Compile Include="Persistence\Presenters\HelpAboutPresenter.cs" />
+    <Compile Include="Persistence\Presenters\MainPresenter.cs" />
+    <Compile Include="Persistence\Presenters\UserControls\DepartmensUserControlPresenter.cs" />
+    <Compile Include="Persistence\Presenters\UserControls\NewsUserControlPresenter.cs" />
+    <Compile Include="Persistence\Presenters\UserControls\PlantsUserControlPresenter.cs" />
+    <Compile Include="Persistence\Views\ErrorMessageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persistence\Views\ErrorMessageView.Designer.cs">
+      <DependentUpon>ErrorMessageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Views\HelpAboutView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persistence\Views\HelpAboutView.Designer.cs">
+      <DependentUpon>HelpAboutView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Views\UserControls\DepartmentsUserControlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Persistence\Views\UserControls\DepartmentsUserControlView.Designer.cs">
+      <DependentUpon>DepartmentsUserControlView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Views\UserControls\NewsUserControlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Persistence\Views\UserControls\NewsUserControlView.Designer.cs">
+      <DependentUpon>NewsUserControlView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Views\UserControls\PlantsUserControlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Persistence\Views\UserControls\PlantsUserControlView.Designer.cs">
+      <DependentUpon>PlantsUserControlView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Views\ErrorMessageView.resx">
+      <DependentUpon>ErrorMessageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Views\HelpAboutView.resx">
+      <DependentUpon>HelpAboutView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Views\UserControls\DepartmentsUserControlView.resx">
+      <DependentUpon>DepartmentsUserControlView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Views\UserControls\NewsUserControlView.resx">
+      <DependentUpon>NewsUserControlView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Views\UserControls\PlantsUserControlView.resx">
+      <DependentUpon>PlantsUserControlView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonComponents\CommonComponents.csproj">
+      <Project>{dddb8176-2fa6-4f8b-aa52-708b4a63f0db}</Project>
+      <Name>CommonComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\bell %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apathae-Chakram-2-Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house-2-32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-go-home %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantCompanyLogojpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantCompanyPictureResize1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantCompanyResize2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantCompanyResize3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bell-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoolBell56x56.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoolBellMark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-more-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkyNFlowers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkyNFlowers2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icontexto_green_04_us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantLogo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

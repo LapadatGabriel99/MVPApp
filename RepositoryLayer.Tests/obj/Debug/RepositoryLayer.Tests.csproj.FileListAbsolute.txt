@@ -1,0 +1,15 @@
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\obj\Debug\RepositoryLayer.Tests.csprojAssemblyReference.cache
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\RepositoryLayer.Tests.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\RepositoryLayer.Tests.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\DomainLayer.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\RepositoryLayer.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\FluentValidation.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\DomainLayer.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\RepositoryLayer.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\RepositoryLayer.dll.config
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\bin\Debug\FluentValidation.xml
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\obj\Debug\RepositoryLayer.Tests.csproj.CopyComplete
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\obj\Debug\RepositoryLayer.Tests.dll
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\RepositoryLayer.Tests\obj\Debug\RepositoryLayer.Tests.pdb
