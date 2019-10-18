@@ -79,11 +79,8 @@ namespace PresentationLayer
             UnderlineLabelConditions.SetLabelStartingLocation(_underlineLabel, _newsButton, GetDistanceBetweenUnderlineLabelAndButton);
         }       
         public void AddUserControlsToUserControlViewPanel(List<IUserControl> userControlList)
-        {
-            foreach (var userControl in userControlList)
-            {
-                
-            }
+        {            
+
         }
          
         public void DisplayUserControlOnUserControlViewPanel()

@@ -8,6 +8,8 @@ using PresentationLayer.Core.Views;
 using PresentationLayer.Persistence.Presenters;
 using PresentationLayer.Persistence.Views;
 using PresentationLayer.Persistence.Common;
+using PresentationLayer.Persistence.Presenters.UserControls;
+using PresentationLayer.Persistence.Views.UserControls;
 
 namespace PresentationLayer
 {
@@ -25,7 +27,11 @@ namespace PresentationLayer
 
             var mainView = new MainView(new UnderlineLabelConditions());
             var helpAboutView = new HelpAboutView();
-            IMainPresenter mainPresenter = new MainPresenter(mainView, new HelpAboutPresenter(helpAboutView));
+            var departmentUserControlView = DepartmentsUserControlView.Instance;
+            var newsUserControlView = NewsUserControlView.Instance;
+            var plantsUserControlView = PlantsUserControlView.Instance;
+            IMainPresenter mainPresenter = new MainPresenter(mainView, new HelpAboutPresenter(helpAboutView), new DepartmensUserControlPresenter(departmentUserControlView),
+                new NewsUserControlPresenter(newsUserControlView), new PlantsUserControlPresenter(plantsUserControlView));
             var secondView = mainPresenter.MainView;            
 
             Application.Run((MainView)secondView);

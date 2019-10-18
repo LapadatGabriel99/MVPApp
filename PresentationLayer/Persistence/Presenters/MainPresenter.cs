@@ -24,14 +24,13 @@ namespace PresentationLayer.Persistence.Presenters
 
         public MainPresenter()
         {
-            UserControlList = new List<IUserControl>();
-            SubscribeToEventsSetup();
-            FillUserControlList();
+            UserControlList = new List<IUserControl>();            
         }
 
         public MainPresenter(IMainView mainView): this()
         {
             _mainView = mainView;
+            SubscribeToEventsSetup();
         }
 
         public MainPresenter(IMainView mainView, IHelpAboutPresenter helpAboutPresenter): this(mainView)
@@ -56,6 +55,7 @@ namespace PresentationLayer.Persistence.Presenters
                 this(mainView, helpAboutPresenter, deparmentsUserControlPresenter, newsUserControlPresenter)
         {
             _plantsUserControlPresenter = plantsUserControlPresenter;
+            FillUserControlList();
         }
 
         public IMainView MainView { get { return _mainView ; } }
