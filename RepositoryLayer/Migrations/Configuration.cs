@@ -104,6 +104,9 @@ namespace RepositoryLayer.Migrations
             };
 
             #endregion
+
+            //context.Departments.RemoveRange(departments);
+            //context.SaveChanges();
         }
     }
 }

@@ -9,6 +9,6 @@ namespace PresentationLayer.Core.Views.UserControls
 {
     public interface IDepartmentsUserControlView : IUserControl
     {
-        
+        void PopulateDepartmentListDataGridView();
     }
 }

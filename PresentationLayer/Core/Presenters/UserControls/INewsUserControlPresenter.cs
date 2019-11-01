@@ -11,5 +11,7 @@ namespace PresentationLayer.Core.Presenters.UserControls
     public interface INewsUserControlPresenter 
     {
         INewsUserControlView GetNewsUserControlView { get; }
+
+        void OnNewsUserControlViewLoadingEventRaised(object sender, EventArgs e);
     }
 }

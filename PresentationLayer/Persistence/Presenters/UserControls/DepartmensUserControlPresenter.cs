@@ -20,8 +20,21 @@ namespace PresentationLayer.Persistence.Presenters.UserControls
         public DepartmensUserControlPresenter(IDepartmentsUserControlView departmentsUserControlView)
         {
             _departmentsUserControlView = departmentsUserControlView;
+            SubscribeToEventsSetup();
         }
 
         public IDepartmentsUserControlView GetDepartmentsUserControlView { get { return _departmentsUserControlView; } }
+
+        private void SubscribeToEventsSetup()
+        {
+            _departmentsUserControlView.UserControlViewLoadingEventRaised += new EventHandler(OnDepartmentsUserControlViewLoadingEventRaised);
+        }
+
+        public void OnDepartmentsUserControlViewLoadingEventRaised(object sender, EventArgs e)
+        {
+            _departmentsUserControlView.InitializeUserControlLayout();
+            _departmentsUserControlView.SetUserControlDockingToDockStyleFill();
+            _departmentsUserControlView.PopulateDepartmentListDataGridView();
+        }
     }
 }

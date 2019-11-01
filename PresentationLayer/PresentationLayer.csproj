@@ -63,6 +63,11 @@
     <Compile Include="Core\Common\ILabelConditions.cs" />
     <Compile Include="Core\Common\IUnderlineLabelConditions.cs" />
     <Compile Include="Core\Common\IUserControl.cs" />
+    <Compile Include="Core\Common\Layout\Docking\IControlDocking.cs" />
+    <Compile Include="Core\Common\Layout\Docking\IDockBottom.cs" />
+    <Compile Include="Core\Common\Layout\Docking\IDockFill.cs" />
+    <Compile Include="Core\Common\Layout\Docking\IDockStyle.cs" />
+    <Compile Include="Core\Common\Layout\ILayout.cs" />
     <Compile Include="Core\Dependencies\IMainViewDependency.cs" />
     <Compile Include="Core\Presenters\IBasePresenter.cs" />
     <Compile Include="Core\Presenters\IHelpAboutPresenter.cs" />
@@ -85,6 +90,8 @@
     </Compile>
     <Compile Include="Persistence\Common\ButtonHelper.cs" />
     <Compile Include="Persistence\Common\FormHelper.cs" />
+    <Compile Include="Persistence\Common\Layout\Docking\ControlDocking.cs" />
+    <Compile Include="Persistence\Common\Layout\Layout.cs" />
     <Compile Include="Persistence\Common\PictureBoxHelper.cs" />
     <Compile Include="Persistence\Common\UnderlineLabelConditions.cs" />
     <Compile Include="Persistence\Presenters\BasePresenter.cs" />
@@ -171,6 +178,14 @@
     <ProjectReference Include="..\CommonComponents\CommonComponents.csproj">
       <Project>{dddb8176-2fa6-4f8b-aa52-708b4a63f0db}</Project>
       <Name>CommonComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
+      <Project>{318c1753-f1fe-47a3-8799-707269c6f168}</Project>
+      <Name>DomainLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj">
+      <Project>{27a298af-9a52-46d4-98e5-d3d310f5b39c}</Project>
+      <Name>ServiceLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

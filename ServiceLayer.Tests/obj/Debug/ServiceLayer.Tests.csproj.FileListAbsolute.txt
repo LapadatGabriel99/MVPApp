@@ -27,3 +27,4 @@ C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\ServiceLayer.Tests
 C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\ServiceLayer.Tests\obj\Debug\ServiceLayer.Tests.csproj.CopyComplete
 C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\ServiceLayer.Tests\obj\Debug\ServiceLayer.Tests.dll
 C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\ServiceLayer.Tests\obj\Debug\ServiceLayer.Tests.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2019\Projects\MVPApp\ServiceLayer.Tests\bin\Debug\ServiceLayer.dll.config

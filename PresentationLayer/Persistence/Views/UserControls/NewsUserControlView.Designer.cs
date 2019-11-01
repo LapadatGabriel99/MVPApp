@@ -47,6 +47,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NewsUserControlView";
             this.Size = new System.Drawing.Size(800, 220);
+            this.Load += new System.EventHandler(this.NewsUserControlView_Load);
             this.ResumeLayout(false);
 
         }

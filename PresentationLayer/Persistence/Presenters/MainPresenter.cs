@@ -88,25 +88,29 @@ namespace PresentationLayer.Persistence.Presenters
 
         public void OnMainViewLoadingEventRaised(object sender, EventArgs e)
         {
+            _mainView.AddUserControlsToUserControlViewPanel((List<IUserControl>)UserControlList);
             _mainView.SetUnderlineLabelStartingLocation();
+            _mainView.DisplayUserControlOnUserControlViewPanel(_newsUserControlPresenter.GetNewsUserControlView);
             _mainView.ChangeMainViewStartPosition();
             _mainView.ShowMainView();
-            _mainView.InitializeUserControlList();
         }
         
         public void OnNewsButtonClickEventRaised(object sender, EventArgs e)
         {
-            _mainView.ChangeUnderlineLabelLocation(_mainView.NewsButton);            
+            _mainView.ChangeUnderlineLabelLocation(_mainView.NewsButton);
+            _mainView.DisplayUserControlOnUserControlViewPanel(_newsUserControlPresenter.GetNewsUserControlView);
         }
 
         public void OnPlantsButtonClickEventRaised(object sender, EventArgs e)
         {
             _mainView.ChangeUnderlineLabelLocation(_mainView.PlantsButton);
+            _mainView.DisplayUserControlOnUserControlViewPanel(_plantsUserControlPresenter.GetPlantsUserControlView);
         }
 
         public void OnDepartmentsButtonClickEventRaised(object sender, EventArgs e)
         {
             _mainView.ChangeUnderlineLabelLocation(_mainView.DepartmentsButton);
+            _mainView.DisplayUserControlOnUserControlViewPanel(_deparmentsUserControlPresenter.GetDepartmentsUserControlView);
         }
     }
 }

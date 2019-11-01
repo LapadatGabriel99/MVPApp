@@ -10,6 +10,7 @@ namespace ServiceLayer.Core
 {
     public interface IUnitOfWork
     {
+        RepositoryLayer.Core.IUnitOfWork RepositoryUnitOfWork { get; set; }
         IDepartmentServices DepartmentServices { get; set; }
         IThrowingExceptionsForUnitTests ExceptionsForUnitTests { get; set; } 
     }

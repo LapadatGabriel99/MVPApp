@@ -26,7 +26,7 @@ namespace PresentationLayer
 
         private const int _distanceBetweenUnderlineLabelAndButton = 26;
         private IList<UserControl> _userControlList;
-        private DepartmentsUserControlView _departmentsUserControlView;
+        //private DepartmentsUserControlView _departmentsUserControlView;
 
         public int GetDistanceBetweenUnderlineLabelAndButton { get { return _distanceBetweenUnderlineLabelAndButton; } }
         
@@ -36,18 +36,18 @@ namespace PresentationLayer
         public Button PlantsButton { get { return _plantsButton; } }
         public Button DepartmentsButton { get { return _departmentsButton; } }
 
-        public IList<UserControl> UserControlList 
-        {
-            get
-            {
-                return _userControlList;
-            }
-            private set
-            {
-                _userControlList = value;
-            } 
-        }
-
+        //public IList<UserControl> UserControlList 
+        //{
+        //    get
+        //    {
+        //        return _userControlList;
+        //    }
+        //    private set
+        //    {
+        //        _userControlList = value;
+        //    } 
+        //}        
+        
         public MainView()
         {               
             InitializeComponent();
@@ -79,13 +79,19 @@ namespace PresentationLayer
             UnderlineLabelConditions.SetLabelStartingLocation(_underlineLabel, _newsButton, GetDistanceBetweenUnderlineLabelAndButton);
         }       
         public void AddUserControlsToUserControlViewPanel(List<IUserControl> userControlList)
-        {            
-
+        {
+            foreach (var userControl in userControlList)
+            {
+                if(!_userControlViewPanel.Controls.Contains((Control)userControl))
+                {
+                    _userControlViewPanel.Controls.Add((Control)userControl); 
+                }
+            }
         }
          
-        public void DisplayUserControlOnUserControlViewPanel()
+        public void DisplayUserControlOnUserControlViewPanel(IUserControl userControl)
         {
-            throw new NotImplementedException();
+            userControl.ShowUserControl();           
         }
 
         public void InitializeUserControlList()

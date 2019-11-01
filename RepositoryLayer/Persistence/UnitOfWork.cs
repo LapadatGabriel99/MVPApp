@@ -20,7 +20,7 @@ namespace RepositoryLayer.Persistence
         {
             _context = context;
             Transaction = new DataTransaction(_context);
-            Departments = new DepartmentRepository(_context);
+            Departments = new DepartmentRepository(_context);            
         }
 
         public int Complete()

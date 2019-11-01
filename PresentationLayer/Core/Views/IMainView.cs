@@ -34,6 +34,6 @@ namespace PresentationLayer.Core.Views
         void InitializeUserControlList();
 
         void AddUserControlsToUserControlViewPanel(List<IUserControl> userControlList);
-        void DisplayUserControlOnUserControlViewPanel();
+        void DisplayUserControlOnUserControlViewPanel(IUserControl userControl);
     }
 }

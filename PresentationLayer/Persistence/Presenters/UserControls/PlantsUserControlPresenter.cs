@@ -16,12 +16,23 @@ namespace PresentationLayer.Persistence.Presenters.UserControls
         {
 
         }
-
+        
         public PlantsUserControlPresenter(IPlantsUserControlView plantsUserControlView)
         {
             _plantsUserControlView = plantsUserControlView;
         }
 
         public IPlantsUserControlView GetPlantsUserControlView { get { return _plantsUserControlView; } }
+
+        private void SubscribeToEventsSetup()
+        {
+            _plantsUserControlView.UserControlViewLoadingEventRaised += new EventHandler(OnPlantsUserControlViewLoadingEventRaised);
+        }
+
+        public void OnPlantsUserControlViewLoadingEventRaised(object sender, EventArgs e)
+        {
+            _plantsUserControlView.InitializeUserControlLayout();
+            _plantsUserControlView.SetUserControlDockingToDockStyleFill();
+        }
     }
 }

@@ -11,5 +11,7 @@ namespace PresentationLayer.Core.Presenters.UserControls
     public interface IDeparmentsUserControlPresenter 
     {
         IDepartmentsUserControlView GetDepartmentsUserControlView { get; }
+
+        void OnDepartmentsUserControlViewLoadingEventRaised(object sender, EventArgs e);
     }
 }

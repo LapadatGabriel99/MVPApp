@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentValidation.8.4.0\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
@@ -40,6 +44,8 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,13 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\CommonServices\ICrudOperations.cs" />
     <Compile Include="Core\CommonServices\IModelValidationCheck.cs" />
     <Compile Include="Core\IThrowingExceptionsForUnitTests.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Core\Services\DepartmentServices\IDepartmentCrudOperations.cs" />
     <Compile Include="Core\Services\DepartmentServices\IDepartmentServices.cs" />
+    <Compile Include="Core\CommonServices\IExceptionMessageStringService.cs" />
     <Compile Include="Persistence\CommonServices\ICheckForValidationFails.cs" />
     <Compile Include="Persistence\CommonServices\ModelValidationCheck.cs" />
+    <Compile Include="Persistence\Services\DepartmentServices\DepartmentCrudOperations.cs" />
     <Compile Include="Persistence\Services\DepartmentServices\DepartmentServices.cs" />
+    <Compile Include="Persistence\CommonServices\ExceptionMessageStringService.cs" />
     <Compile Include="Persistence\ThrowingExceptionsForUnitTests.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +82,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

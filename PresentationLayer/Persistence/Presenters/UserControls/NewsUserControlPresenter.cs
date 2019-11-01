@@ -23,5 +23,16 @@ namespace PresentationLayer.Persistence.Presenters.UserControls
         }
 
         public INewsUserControlView GetNewsUserControlView { get { return _newsUserControlView; } }
+
+        private void SubscribeToEventsSetup()
+        {
+            _newsUserControlView.UserControlViewLoadingEventRaised += new EventHandler(OnNewsUserControlViewLoadingEventRaised);
+        }
+
+        public void OnNewsUserControlViewLoadingEventRaised(object sender, EventArgs e)
+        {
+            _newsUserControlView.InitializeUserControlLayout();
+            _newsUserControlView.SetUserControlDockingToDockStyleFill();
+        }
     }
 }

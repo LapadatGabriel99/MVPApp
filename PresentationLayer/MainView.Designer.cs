@@ -62,7 +62,8 @@
             // _userControlViewPanel
             // 
             this._userControlViewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this._userControlViewPanel.Location = new System.Drawing.Point(0, 265);
+            this._userControlViewPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._userControlViewPanel.Location = new System.Drawing.Point(0, 266);
             this._userControlViewPanel.Name = "_userControlViewPanel";
             this._userControlViewPanel.Size = new System.Drawing.Size(800, 220);
             this._userControlViewPanel.TabIndex = 1;

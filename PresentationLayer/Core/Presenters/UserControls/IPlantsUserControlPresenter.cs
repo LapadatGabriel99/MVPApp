@@ -11,5 +11,7 @@ namespace PresentationLayer.Core.Presenters.UserControls
     public interface IPlantsUserControlPresenter
     {
         IPlantsUserControlView GetPlantsUserControlView { get; }
+
+        void OnPlantsUserControlViewLoadingEventRaised(object sender, EventArgs e);
     }
 }
